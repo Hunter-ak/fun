@@ -1,0 +1,14 @@
+DELIMITER $$
+
+CREATE PROCEDURE insert_employee (
+    IN p_id INT,
+    IN p_name VARCHAR(100),
+    IN p_email VARCHAR(100),
+    IN p_hire_date DATE
+)
+BEGIN
+    INSERT INTO employees (id, name, email, hire_date)
+    VALUES (p_id, p_name, p_email, p_hire_date);
+END$$
+
+DELIMITER ;
